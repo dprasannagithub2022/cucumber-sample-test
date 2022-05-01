@@ -19,7 +19,6 @@ public class Steps {
 		WebDriver driver= new ChromeDriver();
 		driver.get("https://facebook.com");
 		driver.close();
-		
 	}
 
 	@When("^Enter the Username and Password$")
