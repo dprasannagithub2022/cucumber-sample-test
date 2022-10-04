@@ -1,5 +1,8 @@
 package StepDefinition;
 
+import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +26,7 @@ public class OrangeHrmLoginSteps {
 	@When("^I enter \"(.*)\" and \"(.*)\".$")
 	public void i_enter_user_name_and_password(String username, String password) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\laksh\\Downloads\\chromedriver_win32_new\\chromedriver.exe");
+				"C:\\Users\\laksh\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
@@ -35,12 +38,20 @@ public class OrangeHrmLoginSteps {
 
 		WebElement btnlogin = driver.findElement(By.id("btnLogin"));
 		btnlogin.click();
+		System.out.println(driver.getTitle());
+		Assert.assertEquals("OrangeHRM", driver.getTitle());
 		driver.close();
 	}
 
 	@Then("^check user succesfully login and came to home page.$")
 	public void check_user_succesfully_login_and_came_to_home_page() {
+		
+//		Assert.assertTrue(false);
+//
+//		System.out.println("Assert Worked");
 		System.out.println("orange hrm given");
+	
+		
 	}
 	
 	@Given("^User already in Orange HRM$")
@@ -50,7 +61,7 @@ public class OrangeHrmLoginSteps {
 	@When("^I enter user name  for the \"(.*)\" and \"(.*)\" in step$")
 	public void i_enter_user_name_for_the_admin_and_admin123_in_step(String username,String password) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\laksh\\Downloads\\chromedriver_win32_new\\chromedriver.exe");
+				"C:\\Users\\laksh\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
@@ -62,13 +73,18 @@ public class OrangeHrmLoginSteps {
 
 		WebElement btnlogin = driver.findElement(By.id("btnLogin"));
 		btnlogin.click();
-		driver.close();
+		//driver.close();
+		
+		
 		System.out.println(" Data from scenario out line.");
 
-		
+
 	}
 	@Then("^I verify  step$")
 	public void i_verify_step() {
+		Assert.assertTrue(false);
+
+		System.out.println("Assert Worked");
 	   System.out.println("orange hrm usign outline scenario");
 	}
 
