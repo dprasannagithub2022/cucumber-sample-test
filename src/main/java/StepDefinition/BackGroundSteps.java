@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class BackGroundSteps {
-// Hi this is comments for git usage     Modified for master
+// Hi this is comments for git usage
 
 @Given("Launch browser")
 public void launch_browser() {
