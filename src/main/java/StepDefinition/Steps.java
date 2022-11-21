@@ -15,10 +15,10 @@ public class Steps {
 		System.out.println("This Step open the Firefox and launch the application.");
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\laksh\\Downloads\\chromedriver_win32_new\\chromedriver.exe");
+				"C:\\Users\\laksh\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
 		driver.get("https://facebook.com");
-		driver.close();
+		//driver.close();
 	}
 
 	@When("^Enter the Username and Password$")
