@@ -11,7 +11,7 @@ Feature: Checking data provider with Orange HRM
     Then check user succesfully login and came to home page.
     
 
-  
+  @tag2
   Scenario Outline: Orange HRM Login Data.
     Given User already in Orange HRM 
     When I enter user name  for the "<username>" and "<password>" in step

@@ -23,7 +23,7 @@ public class OrangeHrmLoginSteps {
 	@When("^I enter \"(.*)\" and \"(.*)\".$")
 	public void i_enter_user_name_and_password(String username, String password) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\laksh\\Downloads\\chromedriver_win32_new\\chromedriver.exe");
+				"C:\\Users\\laksh\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
@@ -50,7 +50,7 @@ public class OrangeHrmLoginSteps {
 	@When("^I enter user name  for the \"(.*)\" and \"(.*)\" in step$")
 	public void i_enter_user_name_for_the_admin_and_admin123_in_step(String username,String password) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\laksh\\Downloads\\chromedriver_win32_new\\chromedriver.exe");
+				"C:\\Users\\laksh\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
